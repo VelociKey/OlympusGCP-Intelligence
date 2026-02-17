@@ -1,0 +1,10 @@
+# OlympusGCP-Intelligence Workspace DNA (jeBNF-MPH)
+workspace_name = "OlympusGCP-Intelligence"
+
+  Item 0 .md "README.md"
+  Domain "10000-Autonomous-Actors" {
+    Domain "900-IntelligenceManager" { Item 1 .go "main.go" }
+  }
+  Domain "20000-Context-Bridges" {
+    Domain "900-IntelligenceBridge" { Item 2 .go "main.go" }
+  }
