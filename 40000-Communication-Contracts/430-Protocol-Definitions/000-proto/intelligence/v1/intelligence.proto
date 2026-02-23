@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package intelligence.v1;
+
+option go_package = "OlympusGCP-Intelligence/40000-Communication-Contracts/430-Protocol-Definitions/000-gen/intelligence/v1;intelligencev1";
+
+service IntelligenceService {
+  rpc Predict (PredictRequest) returns (PredictResponse);
+}
+
+message PredictRequest {
+  string model = 1;
+  string prompt = 2;
+}
+
+message PredictResponse {
+  string prediction = 1;
+}
