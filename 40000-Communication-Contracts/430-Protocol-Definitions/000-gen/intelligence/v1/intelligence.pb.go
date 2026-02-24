@@ -130,7 +130,7 @@ const file_intelligence_v1_intelligence_proto_rawDesc = "" +
 	"prediction\x18\x01 \x01(\tR\n" +
 	"prediction2c\n" +
 	"\x13IntelligenceService\x12L\n" +
-	"\aPredict\x12\x1f.intelligence.v1.PredictRequest\x1a .intelligence.v1.PredictResponseBwZuOlympusGCP-Intelligence/40000-Communication-Contracts/430-Protocol-Definitions/000-gen/intelligence/v1;intelligencev1b\x06proto3"
+	"\aPredict\x12\x1f.intelligence.v1.PredictRequest\x1a .intelligence.v1.PredictResponseBwZuOlympusGCP-Intelligence/gen/v1/intelligence;intelligencev1b\x06proto3"
 
 var (
 	file_intelligence_v1_intelligence_proto_rawDescOnce sync.Once

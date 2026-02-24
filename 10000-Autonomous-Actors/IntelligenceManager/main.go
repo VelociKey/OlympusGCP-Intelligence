@@ -1,34 +1,29 @@
 package main
 
 import (
-	"context"
 	"fmt"
 	"log/slog"
 	"net/http"
 	"time"
 
-	intelligencev1 "OlympusGCP-Intelligence/40000-Communication-Contracts/430-Protocol-Definitions/000-gen/intelligence/v1"
-	"OlympusGCP-Intelligence/40000-Communication-Contracts/430-Protocol-Definitions/000-gen/intelligence/v1/intelligencev1connect"
+	"OlympusGCP-Intelligence/gen/v1/intelligence/intelligencev1connect"
+	"OlympusGCP-Intelligence/10000-Autonomous-Actors/10700-Processing-Engines/10710-Reasoning-Inference/inference"
 
-	"connectrpc.com/connect"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/h2c"
 )
 
-type IntelligenceServer struct{}
-
-func (s *IntelligenceServer) Predict(ctx context.Context, req *connect.Request[intelligencev1.PredictRequest]) (*connect.Response[intelligencev1.PredictResponse], error) {
-	slog.Info("Predict", "model", req.Msg.Model, "prompt", req.Msg.Prompt)
-
-	prediction := fmt.Sprintf("[Sovereign Intelligence] Model: %s acknowledged prompt. Result: Success.", req.Msg.Model)
-	return connect.NewResponse(&intelligencev1.PredictResponse{Prediction: prediction}), nil
-}
-
 func main() {
-	server := &IntelligenceServer{}
+	server := &inference.IntelligenceServer{}
 	mux := http.NewServeMux()
 	path, handler := intelligencev1connect.NewIntelligenceServiceHandler(server)
 	mux.Handle(path, handler)
+
+	// Health Check / Pulse
+	mux.HandleFunc("/pulse", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		fmt.Fprintf(w, `{"status":"HEALTHY", "workspace":"OlympusGCP-Intelligence", "time":"%s"}`, time.Now().Format(time.RFC3339))
+	})
 
 	port := "8096" // From genesis.json
 	slog.Info("IntelligenceManager starting", "port", port)

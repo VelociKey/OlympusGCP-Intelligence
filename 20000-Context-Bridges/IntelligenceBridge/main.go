@@ -9,8 +9,8 @@ import (
 	"connectrpc.com/connect"
 
 	mcpbridge "Olympus2/90000-Enablement-Labs/P0000-pkg/000-mcp-bridge"
-	intelligencev1 "OlympusGCP-Intelligence/40000-Communication-Contracts/430-Protocol-Definitions/000-gen/intelligence/v1"
-	"OlympusGCP-Intelligence/40000-Communication-Contracts/430-Protocol-Definitions/000-gen/intelligence/v1/intelligencev1connect"
+	intelligencev1 "OlympusGCP-Intelligence/gen/v1/intelligence"
+	"OlympusGCP-Intelligence/gen/v1/intelligence/intelligencev1connect"
 )
 
 func main() {

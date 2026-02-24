@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package intelligence.v1;
 
-option go_package = "OlympusGCP-Intelligence/40000-Communication-Contracts/430-Protocol-Definitions/000-gen/intelligence/v1;intelligencev1";
+option go_package = "OlympusGCP-Intelligence/gen/v1/intelligence;intelligencev1";
 
 service IntelligenceService {
   rpc Predict (PredictRequest) returns (PredictResponse);

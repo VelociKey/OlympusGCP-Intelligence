@@ -4,12 +4,13 @@ import (
 	"context"
 	"testing"
 
-	intelligencev1 "OlympusGCP-Intelligence/40000-Communication-Contracts/430-Protocol-Definitions/000-gen/intelligence/v1"
+	intelligencev1 "OlympusGCP-Intelligence/gen/v1/intelligence"
+	"OlympusGCP-Intelligence/10000-Autonomous-Actors/10700-Processing-Engines/10710-Reasoning-Inference/inference"
 	"connectrpc.com/connect"
 )
 
 func TestIntelligenceServer(t *testing.T) {
-	server := &IntelligenceServer{}
+	server := &inference.IntelligenceServer{}
 	ctx := context.Background()
 
 	// Test Predict
