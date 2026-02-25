@@ -13,10 +13,10 @@ func TestIntelligenceServer(t *testing.T) {
 	server := &inference.IntelligenceServer{}
 	ctx := context.Background()
 
-	// Test Predict
+	// Test Predict (Valid)
 	req := connect.NewRequest(&intelligencev1.PredictRequest{
 		Model:  "gemini-pro",
-		Prompt: "What is the meaning of life?",
+		Prompt: "MISSION: Analyze fleet hardening status",
 	})
 	res, err := server.Predict(ctx, req)
 	if err != nil {
@@ -24,5 +24,15 @@ func TestIntelligenceServer(t *testing.T) {
 	}
 	if res.Msg.Prediction == "" {
 		t.Error("Expected prediction, got empty string")
+	}
+
+	// Test Predict (Invalid)
+	badReq := connect.NewRequest(&intelligencev1.PredictRequest{
+		Model:  "gemini-pro",
+		Prompt: "Hello world",
+	})
+	_, err = server.Predict(ctx, badReq)
+	if err == nil {
+		t.Error("Expected error for invalid prompt format, got nil")
 	}
 }
