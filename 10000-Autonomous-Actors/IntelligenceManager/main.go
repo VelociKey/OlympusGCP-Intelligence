@@ -10,8 +10,8 @@ import (
 	"syscall"
 	"time"
 
-	"OlympusGCP-Intelligence/gen/v1/intelligence/intelligencev1connect"
-	"OlympusGCP-Intelligence/10000-Autonomous-Actors/10700-Processing-Engines/10710-Reasoning-Inference/inference"
+	"olympus.fleet/00SDLC/OlympusGCP-Intelligence/gen/v1/intelligence/intelligencev1connect"
+	"olympus.fleet/00SDLC/OlympusGCP-Intelligence/10000-Autonomous-Actors/10700-Processing-Engines/10710-Reasoning-Inference/inference"
 
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/h2c"

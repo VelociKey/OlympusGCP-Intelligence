@@ -4,13 +4,13 @@ import (
 	"context"
 	"net/http"
 
-	"mcp-go/mcp"
+	"github.com/mark3labs/mcp-go/mcp"
 
 	"connectrpc.com/connect"
 
-	mcpbridge "Olympus2/90000-Enablement-Labs/P0000-pkg/000-mcp-bridge"
-	intelligencev1 "OlympusGCP-Intelligence/gen/v1/intelligence"
-	"OlympusGCP-Intelligence/gen/v1/intelligence/intelligencev1connect"
+	mcpbridge "olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/P0900-Labs/140-MCPBridge"
+	intelligencev1 "olympus.fleet/00SDLC/OlympusGCP-Intelligence/gen/v1/intelligence"
+	"olympus.fleet/00SDLC/OlympusGCP-Intelligence/gen/v1/intelligence/intelligencev1connect"
 )
 
 func main() {
