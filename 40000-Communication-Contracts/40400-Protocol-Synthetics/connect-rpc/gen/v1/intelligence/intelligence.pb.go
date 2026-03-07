@@ -121,7 +121,7 @@ var File_v1_intelligence_intelligence_proto protoreflect.FileDescriptor
 
 const file_v1_intelligence_intelligence_proto_rawDesc = "" +
 	"\n" +
-	"\"olympus.fleet/00SDLC/Olympus2/40000-Communication-Contracts/430-Protocol-Definitions/400-Gen/olympus/v1/intelligence/intelligence.proto\x12\x0fintelligence.v1\">\n" +
+	"\"olympus.fleet/00SDLC/Olympus2/40000-Communication-Contracts/40400-Protocol-Synthetics/connect-rpc/olympus/v1/intelligence/intelligence.proto\x12\x0fintelligence.v1\">\n" +
 	"\x0ePredictRequest\x12\x14\n" +
 	"\x05model\x18\x01 \x01(\tR\x05model\x12\x16\n" +
 	"\x06prompt\x18\x02 \x01(\tR\x06prompt\"1\n" +

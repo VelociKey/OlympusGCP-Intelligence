@@ -8,9 +8,9 @@ import (
 
 	"connectrpc.com/connect"
 
-	mcpbridge "olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/P0900-Labs/140-MCPBridge"
-	intelligencev1 "olympus.fleet/00SDLC/OlympusGCP-Intelligence/gen/v1/intelligence"
-	"olympus.fleet/00SDLC/OlympusGCP-Intelligence/gen/v1/intelligence/intelligencev1connect"
+	mcpbridge "olympus.fleet/00SDLC/Olympus2/90000-Enablement-Labs/90200-Logic-Libraries/140-MCPBridge"
+	intelligencev1 "olympus.fleet/00SDLC/OlympusGCP-Intelligence/40000-Communication-Contracts/40400-Protocol-Synthetics/connect-rpc/gen/v1/intelligence"
+	"olympus.fleet/00SDLC/OlympusGCP-Intelligence/40000-Communication-Contracts/40400-Protocol-Synthetics/connect-rpc/gen/v1/intelligence/intelligencev1connect"
 )
 
 func main() {

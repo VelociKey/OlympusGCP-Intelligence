@@ -5,7 +5,7 @@
 package intelligencev1connect
 
 import (
-	intelligence "olympus.fleet/00SDLC/OlympusGCP-Intelligence/gen/v1/intelligence"
+	intelligence "olympus.fleet/00SDLC/OlympusGCP-Intelligence/40000-Communication-Contracts/40400-Protocol-Synthetics/connect-rpc/gen/v1/intelligence"
 	connect "connectrpc.com/connect"
 	context "context"
 	errors "errors"
